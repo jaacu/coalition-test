@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@home')->name('home');
+
+
+
+Route::get('/datatables', 'ProductController@allData')->name('datatables.data');
+
+
+Route::resource('products', 'ProductController');
