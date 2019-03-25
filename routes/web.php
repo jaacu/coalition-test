@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/','HomeController@home')->name('home');
+Route::get('/','ProductController@index')->name('home');
 
 
 
 Route::get('/datatables', 'ProductController@allData')->name('datatables.data');
 
+Route::post('/products', 'ProductController@store')->name('products.store');
+Route::get('/products', 'ProductController@index')->name('products.index');
 
-Route::resource('products', 'ProductController');
+// Route::resource('products', 'ProductController');
