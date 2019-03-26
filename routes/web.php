@@ -19,5 +19,8 @@ Route::get('/datatables', 'ProductController@allData')->name('datatables.data');
 
 Route::post('/products', 'ProductController@store')->name('products.store');
 Route::get('/products', 'ProductController@index')->name('products.index');
+Route::put('/products/{product}', 'ProductController@update')->name('products.update');
 
-// Route::resource('products', 'ProductController');
+
+
+// Route::resourceAPI('products', 'ProductController');
